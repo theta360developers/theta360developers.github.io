@@ -275,4 +275,4 @@ prototype a concept as you wait for the supporting technology to mature.
 
 == Next Steps
 If you're interested in testing out the API, I suggest you read the
-http://codetricity.github.io/theta-s/[Unofficial API Guide].
+http://codetricity.github.io/theta-s/[Unofficial API Guide]. Have fun!
