@@ -16,26 +16,20 @@ This is not authorized by RICOH and is based on publicly available information.
 == Decide on Type of Application
 An application for the RICOH THETA can focus on any of these categories.
 
-* Network control of the camera
+* <<control>>
 ** Example: build a hardware remote to set a timer, use a small hardware device to
-add GPS information or other tags
-* Back-end management of media for use with third-party front-end
-viewers or other existing software
-** Example: build a web front-end using HoloBuilder, Pano2VR, or any number of tools to create buttons
-in the spheres or navigate through the images. Create the back-end to yourself to
-capture media from distributed real estate agents, security cameras, or cameras at
-sporting events. The media also works with Facebook, YouTube, Google+, and
-Google Streetview. So, it's possible that the back-end application could
-manage the media for upload to one of these services for use in social media
-campaigns or event promotion.  For example, the camera could be distributed
-to influencers at an event like the dance party opening and a special platform could
-aggregate and create 360 experiences using an existing front-end system.
-* Viewing and then controlling the 360 degree media with an application you build
-yourself. A common example is to view 360 images in a headset as part of
-an immersive experience. The official RICOH THETA SDK has examples for Android and iOS to
-both view and navigate spherical images. There are also examples of viewing applications
-on the Unofficial RICOH GitHub repository.
+add GPS information or other tags. Media is manually uploaded to YouTube
+or Facebook by photographer or script automatically uploads media using
+https://developers.google.com/youtube/2.0/developers_guide_protocol_uploading_videos?hl=en[YouTube API].
+* <<backend>>
+** Example: mobile app takes image then sends information to server to process
+and display on webpage using embedded third-party image viewer
+or plays video on existing site such as YouTube, Facebook.
+* <<vr>>
+** Example: Viewing and then controlling the 360 degree media with an application you build
+yourself.
 
+[[control]]
 === Ideas for Apps to Control the Camera
 There's many types of applications you can build to control the camera. If you're
 just getting started with 360 images, I recommend you focus on building
@@ -70,7 +64,8 @@ take images of sites and apply tagging.
 a Raspberry Pi, each with a WiFi USB adapter. Trigger the images
 simultaneously using the GPIO pins of the Pi.
 
-=== Ideas for Back-end Server
+[[backend]]
+=== Ideas for Back-end Server Media Management
 In this scenario, you build a web site that hosts 360 images or video.
 You then build a mobile app that connects to THETA and takes the image
 and uploads it to your special server. Example uses are real estate,
@@ -91,7 +86,7 @@ https://developers.theta360.com/en/docs/sdk/[official RICOH SDK]
 for Android or iOS applications.
 
 You can extend this concept to make the images or video viewable
-inside of headset for an immersive experience. The easiest way to
+inside of a headset for an immersive experience. The easiest way to
 get a demo with 360 video up and running is to use an existing
 application such as YouTube to display the media.
 
@@ -122,12 +117,17 @@ and droplets which help to prepare the panoramic images for viewing
 and make them ready-to-use. Making a pano or a tour is possible just
 by drag-and-drop. Commercial product. Demo available.
 
+Other ideas. The camera could be distributed
+to influencers at a travel event like Las Vegas casino opening and a special web
+platform could
+aggregate and create 360 experiences using an existing front-end system.
+
+[[vr]]
 === Ideas for VR Headsets
 
 image::img/guide/immersive.png[Immersive Experience]
 
 The THETA cannot stream video over WiFi. You can use
-
 https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html[`camera._getLivePreview`]
 to get a live view. This only works in still image capture mode, not video mode.
 
@@ -216,7 +216,8 @@ The https://developers.theta360.com/en/docs/sdk/[official RICOH SDK] is a
 great place to start to understand how to
 work with 360 degree media.
 
-To help get started, we've also started collecting community information in
+To help you start your amazing app quickly, we've also started collecting
+community information in
 an unofficial media guide.
 
 * http://theta360developers.github.io/community-document/community.html[THETA Developers Unofficial Media Guide]
@@ -225,4 +226,53 @@ an unofficial media guide.
 These are ideas brought up by the community. We do not know if they are feasible.
 As far as we know, no one has successfully built these applications.
 
+=== Shooting 4 Images Simultaneously To Capture a Large Area
 image::img/guide/4camera.png[4 Camera Rig Concept]
+
+This concept was submitted by a professional VR photographer, but has not
+been built yet. I've adapted the concept with my own idea of using
+Raspberry Pi units.
+
+Materials:
+
+* 4 Raspberry Pi units. Cheap ones fine. Processing power not important.
+* 4 USB WiFi dongles
+* 8 wires to connect to the GPIO pins of the Raspberry Pi
+* Frame or board to mount the Raspberry Pi units together as a single
+transportable unit
+* Physical electrical button
+* Portable power supply for the Raspberry Pis (battery)
+
+Pointers:
+
+* https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/[Adafruit GPIO Setup Guide for Raspberry Pi]
+* https://developers.theta360.com/en/docs/v2/api_reference/options/_wlan_channel.html[`_wlanChannel`] option to set WiFi channel of camera if you encounter interference
+* http://codetricity.github.io/theta-s/[Unofficial API guide] with Raspberry Pi section and Python code examples
+
+=== Live Streaming with External Hardware
+image::img/guide/streamer.png[External unit for live streaming]
+
+The winner of the last TechCrunch Disrupt Hackathon won the RICOH THETA
+prize for streaming video using an Android device and sending the video to
+an external server for stitching.
+
+I built a similar device using a Raspberry Pi that could stream dual-fisheye
+video. Streaming dual-fisheye video to an external server over
+WiFi from a device connected to the THETA is fairly easy. It
+will probably take you less than an hour. Different groups of people have
+then got the stitching to work, though there are gaps in the edges of the
+video that
+are noticeable. You probably can't get rid of the gaps without
+confidential information that RICOH can't release to the public.
+
+The other thing to consider is that RICOH demoed live streaming and
+stitched video at CES in January over USB. Thus, it seems likely
+there will be an official solution coming out in the future
+that solves the stitching problem.
+
+However, this is still an interesting idea that could work to
+prototype a concept as you wait for the supporting technology to mature.
+
+== Next Steps
+If you're interested in testing out the API, I suggest you read the
+http://codetricity.github.io/theta-s/[Unofficial API Guide].

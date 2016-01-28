@@ -751,15 +751,21 @@ p { margin-bottom: 1.25rem; }
 <ul class="sectlevel1">
 <li><a href="#_decide_on_type_of_application">1. Decide on Type of Application</a>
 <ul class="sectlevel2">
-<li><a href="#_ideas_for_apps_to_control_the_camera">1.1. Ideas for Apps to Control the Camera</a></li>
-<li><a href="#_ideas_for_back_end_server">1.2. Ideas for Back-end Server</a></li>
-<li><a href="#_ideas_for_vr_headsets">1.3. Ideas for VR Headsets</a></li>
+<li><a href="#control">1.1. Ideas for Apps to Control the Camera</a></li>
+<li><a href="#backend">1.2. Ideas for Back-end Server Media Management</a></li>
+<li><a href="#vr">1.3. Ideas for VR Headsets</a></li>
 </ul>
 </li>
 <li><a href="#__a_href_https_developers_theta360_com_en_docs_sdk_the_official_sdk_a">2. <a href="https://developers.theta360.com/en/docs/sdk/">The Official SDK</a></a></li>
 <li><a href="#_getting_to_know_the_api">3. Getting to Know the API</a></li>
 <li><a href="#_working_with_360_degree_media">4. Working with 360 Degree Media</a></li>
-<li><a href="#_additional_application_ideas">5. Additional Application Ideas</a></li>
+<li><a href="#_additional_application_ideas">5. Additional Application Ideas</a>
+<ul class="sectlevel2">
+<li><a href="#_shooting_4_images_simultaneously_to_capture_a_large_area">5.1. Shooting 4 Images Simultaneously To Capture a Large Area</a></li>
+<li><a href="#_live_streaming_with_external_hardware">5.2. Live Streaming with External Hardware</a></li>
+</ul>
+</li>
+<li><a href="#_next_steps">6. Next Steps</a></li>
 </ul>
 </div>
 </div>
@@ -790,46 +796,45 @@ This is not authorized by RICOH and is based on publicly available information.<
 <div class="ulist">
 <ul>
 <li>
-<p>Network control of the camera</p>
+<p><a href="#control">Ideas for Apps to Control the Camera</a></p>
 <div class="ulist">
 <ul>
 <li>
 <p>Example: build a hardware remote to set a timer, use a small hardware device to
-add GPS information or other tags</p>
+add GPS information or other tags. Media is manually uploaded to YouTube
+or Facebook by photographer or script automatically uploads media using
+<a href="https://developers.google.com/youtube/2.0/developers_guide_protocol_uploading_videos?hl=en">YouTube API</a>.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Back-end management of media for use with third-party front-end
-viewers or other existing software</p>
+<p><a href="#backend">Ideas for Back-end Server Media Management</a></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Example: build a web front-end using HoloBuilder, Pano2VR, or any number of tools to create buttons
-in the spheres or navigate through the images. Create the back-end to yourself to
-capture media from distributed real estate agents, security cameras, or cameras at
-sporting events. The media also works with Facebook, YouTube, Google+, and
-Google Streetview. So, it&#8217;s possible that the back-end application could
-manage the media for upload to one of these services for use in social media
-campaigns or event promotion.  For example, the camera could be distributed
-to influencers at an event like the dance party opening and a special platform could
-aggregate and create 360 experiences using an existing front-end system.</p>
+<p>Example: mobile app takes image then sends information to server to process
+and display on webpage using embedded third-party image viewer
+or plays video on existing site such as YouTube, Facebook.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Viewing and then controlling the 360 degree media with an application you build
-yourself. A common example is to view 360 images in a headset as part of
-an immersive experience. The official RICOH THETA SDK has examples for Android and iOS to
-both view and navigate spherical images. There are also examples of viewing applications
-on the Unofficial RICOH GitHub repository.</p>
+<p><a href="#vr">Ideas for VR Headsets</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: Viewing and then controlling the 360 degree media with an application you build
+yourself.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_ideas_for_apps_to_control_the_camera">1.1. Ideas for Apps to Control the Camera</h3>
+<h3 id="control">1.1. Ideas for Apps to Control the Camera</h3>
 <div class="paragraph">
 <p>There&#8217;s many types of applications you can build to control the camera. If you&#8217;re
 just getting started with 360 images, I recommend you focus on building
@@ -894,7 +899,7 @@ simultaneously using the GPIO pins of the Pi.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ideas_for_back_end_server">1.2. Ideas for Back-end Server</h3>
+<h3 id="backend">1.2. Ideas for Back-end Server Media Management</h3>
 <div class="paragraph">
 <p>In this scenario, you build a web site that hosts 360 images or video.
 You then build a mobile app that connects to THETA and takes the image
@@ -941,7 +946,7 @@ for Android or iOS applications.</p>
 </div>
 <div class="paragraph">
 <p>You can extend this concept to make the images or video viewable
-inside of headset for an immersive experience. The easiest way to
+inside of a headset for an immersive experience. The easiest way to
 get a demo with 360 video up and running is to use an existing
 application such as YouTube to display the media.</p>
 </div>
@@ -982,19 +987,23 @@ by drag-and-drop. Commercial product. Demo available.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Other ideas. The camera could be distributed
+to influencers at a travel event like Las Vegas casino opening and a special web
+platform could
+aggregate and create 360 experiences using an existing front-end system.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_ideas_for_vr_headsets">1.3. Ideas for VR Headsets</h3>
+<h3 id="vr">1.3. Ideas for VR Headsets</h3>
 <div class="imageblock">
 <div class="content">
 <img src="img/guide/immersive.png" alt="Immersive Experience">
 </div>
 </div>
 <div class="paragraph">
-<p>The THETA cannot stream video over WiFi. You can use</p>
-</div>
-<div class="paragraph">
-<p><a href="https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html"><code>camera._getLivePreview</code></a>
+<p>The THETA cannot stream video over WiFi. You can use
+<a href="https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html"><code>camera._getLivePreview</code></a>
 to get a live view. This only works in still image capture mode, not video mode.</p>
 </div>
 <div class="paragraph">
@@ -1158,7 +1167,8 @@ great place to start to understand how to
 work with 360 degree media.</p>
 </div>
 <div class="paragraph">
-<p>To help get started, we&#8217;ve also started collecting community information in
+<p>To help you start your amazing app quickly, we&#8217;ve also started collecting
+community information in
 an unofficial media guide.</p>
 </div>
 <div class="ulist">
@@ -1177,17 +1187,109 @@ an unofficial media guide.</p>
 <p>These are ideas brought up by the community. We do not know if they are feasible.
 As far as we know, no one has successfully built these applications.</p>
 </div>
+<div class="sect2">
+<h3 id="_shooting_4_images_simultaneously_to_capture_a_large_area">5.1. Shooting 4 Images Simultaneously To Capture a Large Area</h3>
 <div class="imageblock">
 <div class="content">
 <img src="img/guide/4camera.png" alt="4 Camera Rig Concept">
 </div>
+</div>
+<div class="paragraph">
+<p>This concept was submitted by a professional VR photographer, but has not
+been built yet. I&#8217;ve adapted the concept with my own idea of using
+Raspberry Pi units.</p>
+</div>
+<div class="paragraph">
+<p>Materials:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>4 Raspberry Pi units. Cheap ones fine. Processing power not important.</p>
+</li>
+<li>
+<p>4 USB WiFi dongles</p>
+</li>
+<li>
+<p>8 wires to connect to the GPIO pins of the Raspberry Pi</p>
+</li>
+<li>
+<p>Frame or board to mount the Raspberry Pi units together as a single
+transportable unit</p>
+</li>
+<li>
+<p>Physical electrical button</p>
+</li>
+<li>
+<p>Portable power supply for the Raspberry Pis (battery)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pointers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/">Adafruit GPIO Setup Guide for Raspberry Pi</a></p>
+</li>
+<li>
+<p><a href="https://developers.theta360.com/en/docs/v2/api_reference/options/_wlan_channel.html"><code>_wlanChannel</code></a> option to set WiFi channel of camera if you encounter interference</p>
+</li>
+<li>
+<p><a href="http://codetricity.github.io/theta-s/">Unofficial API guide</a> with Raspberry Pi section and Python code examples</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_live_streaming_with_external_hardware">5.2. Live Streaming with External Hardware</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/guide/streamer.png" alt="External unit for live streaming">
+</div>
+</div>
+<div class="paragraph">
+<p>The winner of the last TechCrunch Disrupt Hackathon won the RICOH THETA
+prize for streaming video using an Android device and sending the video to
+an external server for stitching.</p>
+</div>
+<div class="paragraph">
+<p>I built a similar device using a Raspberry Pi that could stream dual-fisheye
+video. Streaming dual-fisheye video to an external server over
+WiFi from a device connected to the THETA is fairly easy. It
+will probably take you less than an hour. Different groups of people have
+then got the stitching to work, though there are gaps in the edges of the
+video that
+are noticeable. You probably can&#8217;t get rid of the gaps without
+confidential information that RICOH can&#8217;t release to the public.</p>
+</div>
+<div class="paragraph">
+<p>The other thing to consider is that RICOH demoed live streaming and
+stitched video at CES in January over USB. Thus, it seems likely
+there will be an official solution coming out in the future
+that solves the stitching problem.</p>
+</div>
+<div class="paragraph">
+<p>However, this is still an interesting idea that could work to
+prototype a concept as you wait for the supporting technology to mature.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_next_steps">6. Next Steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you&#8217;re interested in testing out the API, I suggest you read the
+<a href="http://codetricity.github.io/theta-s/">Unofficial API Guide</a>.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-01-27 14:47:08 PST
+Last updated 2016-01-27 17:44:43 PST
 </div>
 </div>
 </body>
