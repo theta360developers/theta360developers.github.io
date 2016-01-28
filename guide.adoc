@@ -154,6 +154,18 @@ NOTE: At CES, RICOH demonstrated live streaming of stiched video.
 This software is not yet available for public use (as of 1/27).
 RICOH is not able to disclose lens distortion data.
 
+The RICOH THETA S does support
+https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html[`camera.getLivePreview`]
+in still image mode. This outputs binary equirectangular MotionJPEG for Live View.
+
+According the
+https://developers.theta360.com/en/docs/introduction/[RICOH site],
+the image size for Live View is
+640x320 and the frame rate is 10fps.
+
+It might be theoretically possible to use LivePreview to show MotionJPEG at
+low resolution and then trigger a high-resolution 360 image for transfer
+to the headset. You may encounter problems with the delay.
 
 
 == https://developers.theta360.com/en/docs/sdk/[The Official SDK]
@@ -272,6 +284,13 @@ that solves the stitching problem.
 
 However, this is still an interesting idea that could work to
 prototype a concept as you wait for the supporting technology to mature.
+
+image::img/guide/streamer2.png[Official RICOH USB driver for livestreaming]
+
+It's important to note that the resolution of the stitched video may be
+lower than what you need for actual use. It's for experimentation and
+prototyping with equipment you may already have around your studio.
+
 
 == Next Steps
 If you're interested in testing out the API, I suggest you read the

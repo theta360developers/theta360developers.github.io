@@ -1051,6 +1051,22 @@ RICOH is not able to disclose lens distortion data.
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>The RICOH THETA S does support
+<a href="https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html"><code>camera.getLivePreview</code></a>
+in still image mode. This outputs binary equirectangular MotionJPEG for Live View.</p>
+</div>
+<div class="paragraph">
+<p>According the
+<a href="https://developers.theta360.com/en/docs/introduction/">RICOH site</a>,
+the image size for Live View is
+640x320 and the frame rate is 10fps.</p>
+</div>
+<div class="paragraph">
+<p>It might be theoretically possible to use LivePreview to show MotionJPEG at
+low resolution and then trigger a high-resolution 360 image for transfer
+to the headset. You may encounter problems with the delay.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1274,6 +1290,16 @@ that solves the stitching problem.</p>
 <p>However, this is still an interesting idea that could work to
 prototype a concept as you wait for the supporting technology to mature.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="img/guide/streamer2.png" alt="Official RICOH USB driver for livestreaming">
+</div>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to note that the resolution of the stitched video may be
+lower than what you need for actual use. It&#8217;s for experimentation and
+prototyping with equipment you may already have around your studio.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1289,7 +1315,7 @@ prototype a concept as you wait for the supporting technology to mature.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-01-27 18:39:35 PST
+Last updated 2016-01-28 08:04:46 PST
 </div>
 </div>
 </body>
