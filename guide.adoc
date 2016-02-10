@@ -85,6 +85,21 @@ sporting event, music festival, travel.
 
 image::img/guide/realestate.png[Real estate application]
 
+A basic mockup of this concept built by a high school student
+is available http://kaiyotesoft.github.io/realEstate/dynamic.html[here].
+The purpose is to show you how easy it is to start building
+your own site with a JavaScript open source viewer and a basic
+http://getbootstrap.com/[Bootstrap] template.
+The site, including the source code for the
+viewer software, is available as a
+https://github.com/KaiyoteSoft/realEstate[GitHub repository],
+gh-pages branch.
+
+The mockup of the controller is based on an existing Python/Pygame
+application that was described in the
+http://codetricity.github.io/theta-s/[Unofficial API Guide]. Full
+source code available.
+
 IMPORTANT: The mobile app will not be able to connect to the
 THETA and Internet WiFi at the same time. You may need to
 disconnect the phone to THETA connection before connecting
@@ -302,6 +317,13 @@ image::img/guide/streamer2.png[Official RICOH USB driver for livestreaming]
 It's important to note that the resolution of the stitched video may be
 lower than what you need for actual use. It's for experimentation and
 prototyping with equipment you may already have around your studio.
+
+Update: 2/10/2016. The
+http://theta360developers.github.io/community-document/community.html[Unofficial Media Guide]
+has an image and video of
+a demo of the official RICOH live streaming USB driver with stitching. The
+driver is not available to the public yet and may not be available at the
+Feb 13 hackathon.
 
 
 == Next Steps
