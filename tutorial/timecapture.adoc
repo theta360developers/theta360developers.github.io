@@ -1,0 +1,107 @@
+:icons: font
+:toc: right
+:toclevels: 2
+:toc-title: Contents
+:sectnums:
+
+++++
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-73311422-1', 'auto');
+ga('require', 'linkid');
+ga('send', 'pageview');
+</script>
+++++
+
+image::img/timecapture/tutorial.png[TUTORIAL]
+Build a simple app in minutes. Learn advanced concepts and techniques.
+
+= Building a Simple Video Capture App
+
+In this tutorial you will find out how to build simple funcationality to control the RICOH THETA S 360 degree camera. We will walk through step-by-step connecting to the camera, setting up simple API commands, and building a Python app that can start and stop the video, including setting multiple recording sessions in a row, and deciding how long each video segment will be.
+
+When you're done with this tutorial, you should have a good understanding how to control the camera through the open API, and have a basic example app to work with and customize as needed.
+
+Some simple level programming skills are recommended. But this tutorial not require understanding how to build a program from scratch, just how to read code and edit lightly.
+
+== Before You Begin
+
+Here's a taste of what the SDK offers for controlling the camera.
+
+  ImageData getImage(java.lang.String fileId, HttpDownloadListener listener)
+  Acquire raw data of specified image
+
+  ImageSize getImageSize()
+  Acquire currently set shooting size
+
+  java.util.ArrayList<ImageInfo> getList()
+  Acquire list of media files on device
+
+  private java.util.ArrayList<ImageInfo> getListInternal(int maxReceiveEntry, java.lang.String token)
+  Acquire media file list (limited number of items)
+
+  java.io.InputStream getLivePreview()
+  Acquire live view stream
+
+  private java.lang.String getState()
+  Acquire device status
+
+  StorageInfo getStorageInfo()
+  Acquire storage information of device
+
+  Bitmap getThumb(java.lang.String fileId)
+  Acquire thumbnail image
+
+Hopefully, at this stage I've enticed you to open up the official SDK and
+see if it meets your needs.
+
+The SDK covers display and navigation of media. It does not cover video
+streaming.
+
+
+== Sending Your First Commands
+The https://developers.theta360.com/en/docs/sdk/[official RICOH SDK] is a
+great place to start to understand how to work with 360 degree media.
+
+To help you start your amazing app quickly, we've also started collecting
+community information in an unofficial media guide.
+
+* http://theta360developers.github.io/community-document/community.html[THETA Developers Unofficial Media Guide]
+
+== Building a First App
+These are ideas brought up by the community. We do not know if they are feasible.
+As far as we know, no one has successfully built these applications.
+
+=== Shooting Video In Succession
+
+This concept was submitted by a professional VR photographer, but has not
+been built yet. I've adapted the concept with my own idea of using
+Raspberry Pi units.
+
+=== Why Python?
+
+Materials:
+
+* 4 Raspberry Pi units. Cheap ones fine. Processing power not important.
+* 4 USB WiFi dongles
+* 8 wires to connect to the GPIO pins of the Raspberry Pi
+* Frame or board to mount the Raspberry Pi units together as a single
+transportable unit
+* Physical electrical button
+* Portable power supply for the Raspberry Pis (battery)
+
+=== Other Ways To Do It
+
+Pointers:
+
+* https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/[Adafruit GPIO Setup Guide for Raspberry Pi]
+* https://developers.theta360.com/en/docs/v2/api_reference/options/_wlan_channel.html[`_wlanChannel`] option to set WiFi channel of camera if you encounter interference
+* http://codetricity.github.io/theta-s/[Unofficial API guide] with Raspberry Pi section and Python code examples
+
+
+== Next Steps
+If you're interested in testing out the API, I suggest you read the
+http://codetricity.github.io/theta-s/[Unofficial API Guide]. Have fun!
