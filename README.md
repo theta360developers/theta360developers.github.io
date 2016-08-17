@@ -6,3 +6,6 @@ The files ending in `.adoc` are AsciiDoc source files that are
 compiled into HTML for a mini-guides. As of July 6, 2016, we are
 moving these guides to
 [lists.theta360.guide](http://lists.theta360.guide/)
+
+![Analytics](https://ga-beacon.appspot.com/UA-73311422-5/theta360developers.github.io)
+
