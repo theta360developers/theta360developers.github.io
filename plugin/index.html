@@ -20,6 +20,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/landing-page.min.css" rel="stylesheet">
+    <link href="css/plugin.css" rel="stylesheet">
+    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -34,6 +36,11 @@
     <style>
     a:hover {
          text-decoration: none;
+    }
+
+    td {
+      border: 1px gray solid;
+      padding: 5px;
     }
     </style>
 
@@ -158,12 +165,30 @@
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Control Image and Video</h2>
             <p class="lead mb-0">
-              <ul>
-                <li> <a href="https://community.theta360.guide/t/dual-fisheye-images-with-theta-v-plug-in/2692/">Dual-Fisheye</a> 
-                  - take multiple or single dual fisheye images. Code example for early version, final project in store, documenation Ichi Hirota </li>
-                <li> <a href="https://community.theta360.guide/t/hdr-plugin-to-automatically-create-exr-file-for-vfx-use/4132?u=codetricity">
-                  HDR2EXR </a> - Create HDR images inside the Camera.  full code on GitHub, apk, documentation. by Kasper </li>
-              </ul>
+              <table>
+                <tr>
+                  <td><a href="https://github.com/theta360developers/original-dual-fisheye-plugin">Dual-Fisheye
+                  </a></td>
+                  <td>Take multiple or single dual-fisheye images</td>
+                  <td><a href="https://community.theta360.guide/t/dual-fisheye-images-with-theta-v-plug-in/2692/">
+                      Discuss</a></td>
+                      <td>Ichi Hirota</td>
+                </tr>
+                <tr>
+                  <td><a href="https://github.com/theta360developers/HDR2EXR">HDR2EXR</a></td>
+                  <td>Create HDR images inside the camera</td>
+                  <td><a href="https://community.theta360.guide/t/hdr-plugin-to-automatically-create-exr-file-for-vfx-use/4132?u=codetricity">
+                    Discuss</a></td>
+                  <td>Kasper</td>
+                </tr>
+                <tr>
+                  <td><a href="https://github.com/theta360developers/4k-long-video">Long Video </a></td>
+                  <td>Bypass 25 limit on videos. Compress with HEVC</td>
+                  <td><a href="https://community.theta360.guide/t/theta-v-long-video-plug-in-recording-beyond-25-minutes/3483?u=codetricity">
+                    Discuss</a></td>
+                    <td> .guide</td>
+                </tr>
+              </table>
             </p>
           </div>
         </div>
