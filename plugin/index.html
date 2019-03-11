@@ -20,6 +20,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/landing-page.min.css" rel="stylesheet">
+    <link href="css/plugin.css" rel="stylesheet">
+    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -67,6 +69,7 @@
      <div class="overlay"></div>  
       <div class="container">
         <div class="row">
+
           <div class="col-xl-12 mx-auto">
             <h1 class="mb-5">Build Android Apps that Run Inside Your RICOH THETA</h1>
             
@@ -118,9 +121,7 @@
 
 </table>
 
-                              
-          <div class="col-md-4 mx-auto">
-              <a class="btn btn-primary" href="https://plugin-dev-quickstart.readthedocs.io/en/latest/index.html">Getting Started Guide</a>
+
           </div>
 
 
@@ -203,25 +204,105 @@
 
           <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/dual-fish-showcase.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Control Image Stitching</h2>
-            <p class="lead mb-0">Control image and video stitching of dual-fisheye spheres. Reduce time between shots by saving
-              images as dual-fisheye and stitch them later with batch processing. (Stitching library not included in SDK. Third-party libraries 
-              available.)</p>
+            <h2>Control Image and Video</h2>
+            <p class="lead mb-0">
+              <table>
+                <tr>
+                  <td><a href="https://github.com/theta360developers/original-dual-fisheye-plugin">Dual-Fisheye
+                  </a></td>
+                  <td>Take multiple or single dual-fisheye images</td>
+                  <td><a href="https://community.theta360.guide/t/dual-fisheye-images-with-theta-v-plug-in/2692/">
+                      Discuss</a></td>
+                      <td>Ichi Hirota</td>
+                </tr>
+                <tr>
+                  <td><a href="https://github.com/theta360developers/HDR2EXR">HDR2EXR</a></td>
+                  <td>Create HDR images inside the camera with OpenCV</td>
+                  <td><a href="https://community.theta360.guide/t/hdr-plugin-to-automatically-create-exr-file-for-vfx-use/4132?u=codetricity">
+                    Discuss</a></td>
+                  <td>Kasper</td>
+                </tr>
+                <tr>
+                  <td><a href="https://github.com/theta360developers/4k-long-video">Long Video </a></td>
+                  <td>Bypass 25 minute limit on videos. Compress with HEVC</td>
+                  <td><a href="https://community.theta360.guide/t/theta-v-long-video-plug-in-recording-beyond-25-minutes/3483?u=codetricity">
+                    Discuss</a></td>
+                    <td> .guide</td>
+                </tr>
+                <tr>
+                  <td><a href="https://github.com/theta360developers/tensorflow-theta">TensorFlow Demos</a></td>
+                  <td>Object detection and classification, speech recognition, artistic style filter</td>
+                  <td><a href="https://community.theta360.guide/tags/tensorflow">Discuss</a></td>
+                  <td>Shohara</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://github.com/ricohapi/theta-automatic-face-blur-plugin"> Face Blur</a>
+                  </td>
+                  <td>Automatically identify and blur faces inside the camera</td>
+                  <td><a href="https://community.theta360.guide/t/automatic-face-blur-plug-in/3271?u=codetricity">
+                    Discuss</a></td>
+                    <td>Ricoh</td>
+                </tr>
+              </table>
+            </p>
           </div>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/leds.png');"></div>
           <div class="col-lg-6 my-auto showcase-text">
             <h2>Unleash Hardware Features</h2>
-            <p class="lead mb-0">Control LED color, blink rate, button presses, sound, and microphones. Play music or human speech
-              from internal THETA speakers. Access internal sensors, including gyroscopic data. Connect camera directly
-            to Internet. </p>
+            <table>
+              <td><a href="https://github.com/theta360developers/theta-wireless-live-streaming-plugin">
+                  Wireless Live Streaming</a></td>
+              <td>Stream live video to YouTube and Facebook with RTMP</td>
+              <td><a href="https://community.theta360.guide/t/new-wireless-streaming-guide-available/3397">
+                Discuss</a></td>
+              <td>Ricoh</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/theta360developers/theta-motion-sensor/releases">THETA Motion Sensors Demo</a></td>
+              <td>Access accelerometer, magnetic field, gyroscope</td>
+              <td><a href="https://community.theta360.guide/t/howto-use-theta-motion-sensors/4145?u=codetricity">Discuss</a></td>
+              <td>KAZ</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/theta360developers/meowshot">Meow Shot!</a></td>
+              <td>Play cat sounds from internal camera speaker. Record your own sounds with camera microphones.</td>
+              <td><a href="https://community.theta360.guide/c/theta-api-usage/plugin">Discuss</a> </td>
+              <td><a href="https://github.com/shrhdk">Shiro</a></td>
+            </tr>
+            </table>
+            <tr>
+              <td><a href="https://github.com/theta360developers/theta-plugin-gnssreceiver-sample">GPS with USB OTG</a></td>
+              <td>Attach GPS module to THETA with USB port. Receive serial data. Attach to images.</td>
+              <td><a href="https://community.theta360.guide/t/using-the-ricoh-theta-gps-plug-in/3932">Discuss</a></td>
+              <td>KA-2</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/theta360developers/theta-plugin-m5-serial-remote-sample">Connect to Arduino with USB</a></td>
+              <td> Connect to ESP32 M5Stack Arduino. Show camera info on LCD. Control camera with Arduino buttons</td>
+              <td><a href="https://community.theta360.guide/t/m5stack-esp32-arduino-and-ricoh-theta/4102?u=codetricity">Discuss</a></td>
+              <td>KA-2</td>
+            </tr>
+
           </div>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/android-studio.png');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Access Internal Android OS</h2>
+
+            <table>
+              <tr>
+                <td><a href="https://github.com/theta360developers/webgui-sample">WebGUI Sample</a></td>
+                <td>Uses NanoHTTPD to create web GUI. Control LEDs. Save settings to sharedPreferences</td>
+                <td><a href="https://community.theta360.guide/t/creating-a-webui-for-your-theta-plug-in/4054?u=codetricity">Discuss</a></td>
+                <td>@3215</td>
+
+              </tr>
+            </table>
+
             <p class="lead mb-0"> Use standard Android development tools and libraries to 
               build your plug-in and install it directly
               inside the camera. Plug-in SDK comes with Ricoh library to 
