@@ -37,11 +37,17 @@
     a:hover {
          text-decoration: none;
     }
-
-    td {
-      border: 1px gray solid;
-      padding: 5px;
+      
+    table, th, td {
+      border: 0px solid black;
+      border-collapse: collapse;
     }
+    th, td {
+      padding: 5px;
+      text-align: left;  
+      vertical-align: top;
+    }
+
     </style>
 
   </head>
@@ -51,39 +57,76 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="http://theta360.guide/">THETA Developer Guides</a>
-        <a class="btn btn-primary" href="http://theta360.guide/plugin-guide/">dev guide</a>
+        <a class="navbar-brand" href="http://theta360.guide/">theta360.guide Developer Guides</a>
+        <a class="btn btn-primary" href="http://theta360.guide/plugin-guide/">Developer Guide</a>
         <!-- <a class="btn btn-primary" href="https://community.theta360.guide/c/theta-api-usage/plugin">discuss</a> -->
-        <a class="btn btn-primary" href="http://theta360.guide/plugin-user-guide/" >user guide</a>
+        <a class="btn btn-primary" href="http://theta360.guide/plugin-user-guide/">User Guide</a>
       </div>
-    </nav>
+    </nav> 
 
-    <!-- Masthead -->
+    <!-- New Masthead that includes a plain HTML table for formatting Projects-->
     <header class="masthead text-white text-center">
-      <div class="overlay"></div>
+     <div class="overlay"></div>  
       <div class="container">
         <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Build Android Apps that Run Inside the Camera</h1>
-          </div>
-          <div class="col-xl-9 mx-auto" style="margin-top: 1%">
-            <h2 class = "mb-5">25 Sample Applications </h2>
 
-            <div class="col-md-4 mx-auto">
-              <a class="btn btn-primary" href="https://plugin-dev-quickstart.readthedocs.io/en/latest/index.html">Get Started</a>
-          </div>
-        
-          <div style="margin-top: 4%">
+          <div class="col-xl-12 mx-auto">
+            <h1 class="mb-5">Build Android Apps That Run Inside Your THETA</h1>
             
+<table style="width:100%">
+  <tr>
+    <th colspan="3"><h1>Projects</h1></th>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://community.theta360.guide/t/ricoh-blog-post-running-opencv-in-your-ricoh-theta/4084">
+      <img src="img/opencv-project.jpg"><br>
+        <font color="white"><h4>HDR2EXR by Kasper Oerlemans</h4> OpenCV is used widely by well-established companies like Google, Microsoft, Intel. BSD-license makes it easy for businesses to utilize and modify the code. In this project, use your THETA to grab lighting information and create an HDR file.</font> 
+      </td>
+    <td style="vertical-align: top;">
+      <a href="https://community.theta360.guide/t/howto-use-theta-motion-sensors/4145">
+      <img src="img/orientation-project.png"><br>
+        <font color="white"><h4>Accelerometer and Magnetic Field (eCompass)</h4> Use sensor data in a creative way to take pictures. Examples: animal photo trap, dog door security, commercial vehicle dash cam, party “fun” cam to take pictures of you and your friends when you jump in the air.</font>
+    </td>
+    <td>
+      <a href="https://community.theta360.guide/t/m5stack-esp32-arduino-and-ricoh-theta/4102">
+      <img src="img/m5stack-project.png"><br>
+      <font color="white"><h4>M5Stack (ESP32 Arduino) Sample Serial Code</h4> Connect your THETA V to the M5Stack ESP32 Arduino with the USB port. Example code allows you to take pictures, shows QR code that links to pictures in a web browser.</font>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://community.theta360.guide/t/creating-a-webui-for-your-theta-plug-in/4054">
+      <img src="img/webgui-project.png"><br>
+        <font color="white"><h4>Building a WebGUI</h4> Since the RICOH THETA V does not have a screen, you can not use layouts and screen transitions like ordinary Android applications. However, you can provide a Web GUI for your plug-in by setting up a web server.</font>
+      </td>
+    <td>
+      <a href="https://community.theta360.guide/t/ricoh-blog-post-theta-plug-in-development-sending-love-with-theta/3327">
+      <img src="img/messaging-project.png"><br>
+        <font color="white"><h4>Messaging</h4> Use the messaging API from LINE to send a message from the RICOH THETA to a mobile phone. Good for event notification. Can be adapted to any REST API messaging system.</font>
+    </td>
+    <td>
+      <a href="https://github.com/theta360developers/tensorflow-theta">
+      <img src="img/tensorflow-project.png"><br>
+        <font color="white"><h4>Tensorflow</h4> Modified TensorFlow example for THETA V (Android). Object recognition, artistic style application, voice recognition, object detection.</font>  
+    </td>
+  </tr>
+  
+  <tr>
+    <th colspan="3">
+  <!-- Left blank for spacing  -->
+      &nbsp;&nbsp;&nbsp;
+    </th>
+  </tr>
 
-                    <a href="https://www.meetup.com/RICOH-THETA-Developers-SF-Bay-Area/events/259336523/">
-                       Plug-in Build MeetUp in Palo Alto -  March 14, 2019
-                    </a>
-      
-           
-            
+</table>
+
+
           </div>
 
+
+
+   
             <h2 class="mb-5">
               
             </h2>
@@ -196,7 +239,7 @@
                   <td>
                     <a href="https://github.com/ricohapi/theta-automatic-face-blur-plugin"> Face Blur</a>
                   </td>
-                  <td>Automatically identify blur faces inside the camera</td>
+                  <td>Automatically identify and blur faces inside the camera</td>
                   <td><a href="https://community.theta360.guide/t/automatic-face-blur-plug-in/3271?u=codetricity">
                     Discuss</a></td>
                     <td>Ricoh</td>
@@ -206,10 +249,11 @@
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/leds.png');"></div>
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/theta-internals.jpg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
             <h2>Unleash Hardware Features</h2>
             <table>
+              <tr>
               <td><a href="https://github.com/theta360developers/theta-wireless-live-streaming-plugin">
                   Wireless Live Streaming</a></td>
               <td>Stream live video to YouTube and Facebook with RTMP</td>
@@ -225,9 +269,21 @@
             </tr>
             <tr>
               <td><a href="https://github.com/theta360developers/meowshot">Meow Shot!</a></td>
-              <td>Play cat sounds from internal camera speaker. Record your own sounds</td>
-              <td><a href="https://community.theta360.guide/t/learn-speaker-and-microphone-control-with-meow-shot/4180?u=codetricity">Discuss</a> </td>
+              <td>Play cat sounds from internal camera speaker. Record your own sounds with camera microphones.</td>
+              <td><a href="https://community.theta360.guide/c/theta-api-usage/plugin">Discuss</a> </td>
               <td><a href="https://github.com/shrhdk">Shiro</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/theta360developers/theta-plugin-gnssreceiver-sample">GPS with USB OTG</a></td>
+              <td>Attach GPS module to THETA with USB port. Receive serial data. Attach to images.</td>
+              <td><a href="https://community.theta360.guide/t/using-the-ricoh-theta-gps-plug-in/3932">Discuss</a></td>
+              <td>KA-2</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/theta360developers/theta-plugin-m5-serial-remote-sample">Connect to Arduino with USB</a></td>
+              <td> Connect to ESP32 M5Stack Arduino. Show camera info on LCD. Control camera with Arduino buttons</td>
+              <td><a href="https://community.theta360.guide/t/m5stack-esp32-arduino-and-ricoh-theta/4102?u=codetricity">Discuss</a></td>
+              <td>KA-2</td>
             </tr>
             </table>
 
@@ -241,17 +297,13 @@
             <table>
               <tr>
                 <td><a href="https://github.com/theta360developers/webgui-sample">WebGUI Sample</a></td>
-                <td>Run NanoHTTPD web server inside of plug-in to provide GUI configuration</td>
+                <td>Uses NanoHTTPD to create web GUI. Control LEDs. Save settings to SharedPreferences</td>
                 <td><a href="https://community.theta360.guide/t/creating-a-webui-for-your-theta-plug-in/4054?u=codetricity">Discuss</a></td>
                 <td>@3215</td>
 
               </tr>
             </table>
 
-            <p class="lead mb-0"> Use standard Android development tools and libraries to 
-              build your plug-in and install it directly
-              inside the camera. Plug-in SDK comes with Ricoh library to 
-              access camera buttons, LEDs, and camera features.</p>
           </div>
         </div>
       </div>
@@ -268,7 +320,7 @@
               developers!</h2>
           </div>
           <div class="col-md-4 mx-auto">
-              <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSctfID0JFwxgxKb_EnXBCQkzTvhMYYvccmVISdZUdY89AV_JQ/viewform">Join</a>
+              <a class="btn btn-primary" https://community.theta360.guide/signup">Join</a>
           </div>
         </div>
       </div>
@@ -281,11 +333,11 @@
           <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
             <ul class="list-inline mb-2">
               <li class="list-inline-item">
-                <a href="http://theta360.guide/">About</a>
+                <a href="http://theta360.guide#contact">About</a>
               </li>
               <li class="list-inline-item">&sdot;</li>
               <li class="list-inline-item">
-                <a href="http://theta360.guide/">Contact</a>
+                <a href="mailto:info@oppkey.com">Contact</a>
               </li>
               <li class="list-inline-item">&sdot;</li>
               <li class="list-inline-item">
@@ -296,10 +348,16 @@
                 <a href="https://community.theta360.guide/privacy">Privacy Policy</a>
               </li>
             </ul>
-            <p class="text-muted small mb-4 mb-lg-0">&copy; Oppkey 2018. All Rights Reserved.</p>
+            <p class="text-muted small mb-4 mb-lg-0">&copy;Oppkey 2019. All Rights Reserved.</p>
           </div>
           <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
             <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="https://github.com/theta360developers">
+                  <i class="fa fa-github fa-2x fa-fw"></i>
+                </a>
+              </li>
+
               <li class="list-inline-item mr-3">
                 <a href="https://www.facebook.com/theta360guide/">
                   <i class="fa fa-facebook fa-2x fa-fw"></i>
